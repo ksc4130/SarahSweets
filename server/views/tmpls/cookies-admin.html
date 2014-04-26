@@ -1,0 +1,24 @@
+<table class="table table-striped table-hover table-bordered">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Delivery Date</th>
+			<th>Number Of Cookies</th>
+			<th>Additional Info</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="request in cookieRequests" ng-click="showDetails(request)">
+			<td>{{request.firstName}}</td>
+			<td>{{request.lastName}}</td>
+			<td>{{request.emailAddress}}</td>
+			<td>{{request.deliveryDate | date:'MM/dd/yyyy'}}</td>
+			<td>{{request.numberOfCookies}}</td>
+			<td>{{request.additionalInfo | limitTo:15}}{{request.additionalInfo.length > 15 ? '    ...' : ''}}</td>
+			<td>{{request.status}}
+		</tr>
+	</tbody>
+</table>

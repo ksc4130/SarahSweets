@@ -1,0 +1,51 @@
+<div class="row" ng-controller="contactFormCtrl">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 ">
+		<form role="form" name="contact"  ng-submit="processForm()">
+			<div class="form-group">
+				<label for="firstName">First Name</label>
+				<input required ng-model="formData.firstName" type="test" class="form-control" id="firstName" placeholder="Enter your first name">
+			</div>
+			<div class="form-group">
+				<label for="lastName">Last Name</label>
+				<input required ng-model="formData.lastName" type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+			</div>
+		  	<div class="form-group">
+				<label for="emailaddress">Email address</label>
+				<input required ng-model="formData.emailAddress" type="email" class="form-control" id="emailaddress" placeholder="Enter your email address">
+			</div>
+			<div class="form-group" ng-controller="DatepickerCtrl">
+				<label for="cookieByDate">What Day Do You Need Your Cookies?</label>
+				<p class="input-group">
+					<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="formData.deliveryDate" is-open="opened" min="minDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+					</span>
+				</p>
+			</div>
+			<div class="form-group">
+				<label for="numberOfCookies">How Many Dozen of Cookies Would You Like to Order?</label>
+				<select required id="numberOfCookies" ng-init="formData.numberOfCookies = 1"  ng-model="formData.numberOfCookies" class="pull-right">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11 or More</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="additionalInfo">Additional Information</label>
+				<textarea required ng-model="formData.additionalInfo" rows="10" type="multiline" class="form-control" id="additionalInfo" placeholder="Please tell us anything about your order in this area. Which characters, pattern, or design would you like to have on your cookies? Any special requests, must-haves, or allergies should be included here."></textarea>
+			</div>
+		  	<button type="submit" class="btn btn-success btn-block btn-lg">Submit</button>
+		</form>
+	</div>
+<pre>
+	{{formData}}
+</pre>
+</div>

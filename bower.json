@@ -1,0 +1,17 @@
+{
+  "name": "SarahSweets",
+  "version": "0.0.0",
+  "homepage": "\"https://github.com/aedballs/SarahSweets\"",
+  "authors": [
+    "Darren Ball <aedballs@gmail.com>"
+  ],
+  "description": "\"Sweet Surrender Cookie Company\"",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "toastr": "~2.0.1",
+    "angular": "~1.2.14",
+    "angular-ui-router": "~0.2.9"
+  }
+}

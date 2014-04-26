@@ -1,0 +1,11 @@
+{
+  "name": "sweetsurrendercookies.com",
+  "description": "cookies",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "express.io": "*",
+    "ejs":"*",
+    "angular-ui-router":"*"
+  }
+}
