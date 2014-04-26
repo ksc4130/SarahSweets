@@ -6,6 +6,8 @@
   "dependencies": {
     "express.io": "*",
     "ejs":"*",
-    "angular-ui-router":"*"
+    "angular-ui-router":"*",
+      "emailjs": "*",
+      "mongoose": "*"
   }
 }
